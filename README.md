@@ -1,4 +1,4 @@
-Legan Chess
+## Legan Chess
 
 We have strived for almost 5 months to develop a working game of Legan chess with syncing in real time functionalities and many more. Please check it out.
 
