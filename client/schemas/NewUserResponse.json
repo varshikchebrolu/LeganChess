@@ -1,0 +1,29 @@
+{
+  "$id": "https://example.com/address.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "newuser",
+  "description": "NewUser response",
+  "type": "object",
+  "properties": {
+    "requestType": {
+      "description":"type should be NewUser",
+      "type":"string",
+      "pattern":"^NewUser$"
+    },
+    "successful": {
+      "description":"boolean response to request",
+      "type":"boolean"
+    },
+    "userID" : {
+      "description": "return unique userID number for session use",
+      "type":"integer"      
+    },
+    "errorMsg": {
+      "description": "reason for failure if successful=false",
+      "type":"string"
+    }
+    
+  },
+  "required":["requestType", "successful"],
+  "additionalProperties": true
+}

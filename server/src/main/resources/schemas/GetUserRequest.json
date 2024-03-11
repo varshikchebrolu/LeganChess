@@ -1,0 +1,25 @@
+{
+  "$id": "https://example.com/address.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Getuser",
+  "description": "GetUser object for POST request",
+  "type": "object",
+  "properties": {
+    "requestType": {
+      "description": "type should be GetUser",
+      "type": "string",
+      "pattern": "^GetUser$"
+    },
+    "userName": {
+      "description": "username as a string",
+      "type": "string"
+    },
+    "password": {
+      "description": "password as a string",
+      "type": "string",
+      "minLength": 1     
+    }
+  },
+  "required":["requestType","username","password"],
+  "additionalProperties": false
+}

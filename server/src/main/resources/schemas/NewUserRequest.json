@@ -1,0 +1,38 @@
+{
+  "$id": "https://example.com/address.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "newuser",
+  "description": "newUser object for POST request",
+  "type": "object",
+  "properties": {
+    "requestType": {
+      "description": "type should be newUser",
+      "type": "string",
+      "pattern": "^NewUser$"
+    },
+    "firstName": {
+      "description": "name as a string",
+      "type": "string"
+    },
+    "lastName": {
+      "description": "name as a string",
+      "type": "string"
+    },
+    "userName": {
+      "description": "username as a string",
+      "type": "string"
+    },
+    "email": {
+      "description": "email address as a string",
+      "type": "string",
+      "format": "email"
+    },
+    "password": {
+      "description": "password as a string",
+      "type": "string",
+      "minLength": 1     
+    }
+   },
+  "required":["requestType","firstName","lastName","userName","email","password"],
+  "additionalProperties": true
+}

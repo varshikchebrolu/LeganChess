@@ -1,0 +1,20 @@
+{
+  "$id": "https://example.com/address.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Logout",
+  "description": "Logout object for POST request",
+  "type": "object",
+  "properties": {
+    "requestType": {
+      "description": "type should be Logout",
+      "type": "string",
+      "pattern": "^Logout$"
+    },
+    "userID": {
+      "description": "userID as an Integer",
+      "type": "integer"
+    }
+  },
+  "required":["requestType","userID"],
+  "additionalProperties": true
+}

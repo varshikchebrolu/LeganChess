@@ -1,0 +1,25 @@
+{
+  "$id": "https://example.com/address.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "logout",
+  "description": "Logout response",
+  "type": "object",
+  "properties": {
+    "requestType": {
+      "description":"type should be Logout",
+      "type":"string",
+      "pattern":"^Logout$"
+    },
+    "successful": {
+      "description":"boolean response to request",
+      "type":"boolean"
+    },
+    "errorMsg": {
+      "description": "reason for failure if successful=false",
+      "type":"string"
+    }
+
+  },
+  "required":["requestType", "successful"],
+  "additionalProperties": true
+}

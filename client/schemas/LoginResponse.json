@@ -1,0 +1,47 @@
+{
+  "$id": "https://example.com/address.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Login",
+  "description": "Login Response",
+  "type": "object",
+  "properties": {
+    "requestType": {
+      "description": "type should be Login",
+      "type": "string",
+      "pattern": "^Login$"
+    },
+    "firstName": {
+      "description": "name as a string",
+      "type": "string"
+    },
+    "lastName": {
+      "description": "name as a string",
+      "type": "string"
+    },
+    "email": {
+      "description": "email address as a string",
+      "type": "string",
+      "format": "email"
+
+    },
+    "userName": {
+      "description": "username as a string",
+      "type": "string"
+    },
+    "userID": {
+      "description": "userID",
+      "type": "integer"
+    },
+    "successful": {
+      "description": "was login successful",
+      "type": "boolean"
+    },
+  "errorMsg": {
+    "description": "reason for failure if successful=false",
+    "type":"string"
+    }
+
+  },
+  "required":["requestType","email","userID","successful"],
+  "additionalProperties": true
+}
